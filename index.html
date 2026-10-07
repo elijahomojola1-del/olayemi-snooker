@@ -1,0 +1,297 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="OLAYEMI snooker shop: cues, balls, tables, cloth and repairs.">
+<title>OLAYEMI Snooker Shop</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,500;6..96,700;6..96,900&family=Figtree:wght@400;500;600;700&family=DM+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: a club room under one lamp. Full-bleed photo bands alternate with quiet baize-dark panels; the seven colours and their point values run through the page as the one recurring motif. */
+:root{
+  color-scheme:dark;
+  --felt-deep:#0b241b;      /* page ground: baize in shadow */
+  --felt-panel:#11332620;
+  --felt-raise:#143a2b;     /* raised surfaces */
+  --baize:#1f8a55;          /* cloth under the lamp */
+  --mahogany:#4a1f15;       /* cushion rail wood */
+  --brass:#d2ab5a;          /* pocket fittings: the accent */
+  --brass-ink:#1c1405;
+  --ivory:#f3ecdb;          /* cue ball: main text */
+  --ivory-soft:#b9c4b6;     /* secondary text */
+  --line:#f3ecdb26;
+  --chalk:#7db4d4;          /* chalk blue: small utility accent */
+  --b-red:#c81e2b; --b-yellow:#e9b91c; --b-green:#157a4a; --b-brown:#7a4420;
+  --b-blue:#1f5fbf; --b-pink:#ee8fa8; --b-black:#141414;
+  --display:"Bodoni Moda","Didot","Bodoni MT","Times New Roman",serif;
+  --body:"Figtree","Segoe UI",system-ui,sans-serif;
+  --mono:"DM Mono","Consolas","Courier New",monospace;
+}
+*{box-sizing:border-box}
+body{margin:0}
+[hidden]{display:none!important}
+html{scroll-behavior:smooth}
+body{background:var(--felt-deep);color:var(--ivory);font-family:var(--body);font-size:17px;line-height:1.6;overflow-x:hidden}
+img{display:block;max-width:100%}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--brass);outline-offset:3px}
+.wrap{max-width:1180px;margin-inline:auto;padding-inline:clamp(16px,4vw,40px)}
+.eyebrow{font-family:var(--mono);font-size:.76rem;letter-spacing:.2em;text-transform:uppercase;color:var(--brass)}
+h1,h2,h3{font-family:var(--display);font-weight:700;line-height:1.05;margin:0;text-wrap:balance}
+h2{font-size:clamp(2rem,4.6vw,3.4rem)}
+p{margin:0}
+
+/* header */
+.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:#0b241be6;backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:14px}
+.mark{font-family:var(--display);font-weight:900;font-size:1.35rem;letter-spacing:.22em;text-decoration:none;display:flex;align-items:center;gap:10px}
+.mark i{width:14px;height:14px;border-radius:50%;background:radial-gradient(circle at 32% 30%,#fff 0 8%,var(--b-red) 30%,#6d0d15 100%);flex:none}
+.top nav{display:flex;align-items:center;gap:clamp(12px,3vw,30px);font-size:.92rem;font-weight:500}
+.top nav a{text-decoration:none;color:var(--ivory-soft)}
+.top nav a:hover{color:var(--ivory)}
+.top nav a.pill{color:var(--brass-ink)}
+@media (max-width:560px){.top nav a:not(.pill){display:none}}
+
+.btn,.pill{display:inline-flex;align-items:center;justify-content:center;font-weight:700;text-decoration:none;border-radius:999px;transition:transform .15s ease,background .15s ease}
+.pill{background:var(--brass);color:var(--brass-ink);padding:8px 18px;font-size:.9rem}
+.btn{padding:14px 26px;font-size:1rem}
+.btn.solid{background:var(--brass);color:var(--brass-ink)}
+.btn.ghost{border:1.5px solid var(--ivory);color:var(--ivory)}
+.btn:hover,.pill:hover{transform:translateY(-2px)}
+.btn.ghost:hover{background:#f3ecdb1a}
+
+/* hero */
+.hero{position:relative;isolation:isolate;overflow:hidden}
+.hero>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:70% 50%;z-index:-2}
+.hero::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,#0b241b 0%,#0b241be8 34%,#0b241b80 62%,#0b241b1a 100%),linear-gradient(0deg,#0b241b 0%,transparent 30%)}
+.hero .wrap{padding-block:clamp(64px,11vw,140px) clamp(56px,8vw,110px);display:flex;flex-direction:column;gap:22px;align-items:flex-start}
+.hero h1{font-weight:900;font-size:clamp(3.2rem,13.5vw,10.5rem);letter-spacing:.04em;line-height:.9;margin-left:-.04em;max-width:100%}
+.hero h1 span{display:block;font-family:var(--mono);font-weight:400;font-size:clamp(.8rem,1.5vw,1rem);letter-spacing:.42em;text-transform:uppercase;color:var(--brass);margin:0 0 18px .3em;line-height:1.4}
+.hero .lede{font-size:clamp(1.1rem,2vw,1.4rem);max-width:30ch;color:var(--ivory)}
+.hero .acts{display:flex;flex-wrap:wrap;gap:12px;margin-top:8px}
+@media (max-width:700px){.hero::before{background:linear-gradient(0deg,#0b241b 0%,#0b241be0 45%,#0b241b99 100%)}}
+
+/* the seven colours */
+.rail{background:var(--mahogany);border-block:3px solid var(--brass)}
+.rail .wrap{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:18px 28px;padding-block:22px}
+.rail p{font-family:var(--mono);font-size:.76rem;letter-spacing:.16em;text-transform:uppercase;color:#f3ecdbcc;max-width:22ch;line-height:1.5}
+.balls{display:flex;flex-wrap:wrap;gap:clamp(10px,2.4vw,26px);list-style:none;margin:0;padding:0}
+.balls li{display:flex;flex-direction:column;align-items:center;gap:8px;font-family:var(--mono);font-size:.72rem;letter-spacing:.08em;color:#f3ecdbcc;animation:roll .9s cubic-bezier(.2,.8,.2,1) backwards}
+.balls li:nth-child(2){animation-delay:.06s}.balls li:nth-child(3){animation-delay:.12s}.balls li:nth-child(4){animation-delay:.18s}
+.balls li:nth-child(5){animation-delay:.24s}.balls li:nth-child(6){animation-delay:.3s}.balls li:nth-child(7){animation-delay:.36s}
+.ball{--c:var(--b-red);width:clamp(36px,6vw,54px);aspect-ratio:1;border-radius:50%;display:grid;place-items:center;font-family:var(--display);font-weight:700;font-size:clamp(.95rem,1.8vw,1.25rem);color:#fff;text-shadow:0 1px 2px #0009;
+  background:radial-gradient(circle at 32% 28%,#ffffffd9 0 6%,#ffffff40 14%,transparent 30%),radial-gradient(circle at 50% 50%,var(--c) 0 55%,#00000073 100%),var(--c);box-shadow:0 8px 12px -6px #000a}
+.ball.dark-num{color:#2a1c00;text-shadow:none}
+@keyframes roll{from{transform:translateX(-46px) rotate(-200deg)}to{transform:none}}
+
+/* shop */
+section{padding-block:clamp(64px,9vw,120px)}
+.head{display:flex;flex-direction:column;gap:14px;margin-bottom:clamp(28px,4vw,48px);max-width:46rem}
+.head p:last-child{color:var(--ivory-soft);max-width:58ch}
+.grid{display:grid;grid-template-columns:repeat(6,1fr);gap:16px}
+.card{position:relative;isolation:isolate;overflow:hidden;border-radius:6px;min-height:300px;display:flex;flex-direction:column;justify-content:flex-end;gap:6px;padding:22px;grid-column:span 2;background:var(--felt-raise);min-width:0}
+.card.wide{grid-column:span 4;min-height:380px}
+.card img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2;transition:transform .6s ease}
+.card::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(0deg,#07170fF2 0%,#07170f99 38%,#07170f00 70%)}
+.card:hover img{transform:scale(1.04)}
+.card h3{font-size:clamp(1.5rem,2.6vw,2.1rem)}
+.card p{color:#f3ecdbd9;font-size:.96rem;max-width:44ch}
+.card .tag{font-family:var(--mono);font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--brass)}
+@media (max-width:900px){.card,.card.wide{grid-column:span 3}.card.wide{grid-column:span 6}}
+@media (max-width:560px){.card,.card.wide{grid-column:span 6;min-height:260px}}
+
+/* numbers */
+.numbers{position:relative;isolation:isolate;overflow:hidden}
+.numbers>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2}
+.numbers::before{content:"";position:absolute;inset:0;z-index:-1;background:#0b241bd9}
+.numbers dl{display:grid;grid-template-columns:repeat(4,1fr);gap:28px 24px;margin:0}
+.numbers dt{font-family:var(--display);font-weight:900;font-size:clamp(2.4rem,5.4vw,4.4rem);line-height:1;font-variant-numeric:tabular-nums}
+.numbers dt small{font-family:var(--mono);font-weight:400;font-size:.32em;letter-spacing:.08em;color:var(--brass);margin-left:.3em}
+.numbers dd{margin:10px 0 0;color:#f3ecdbd9;font-size:.95rem;max-width:24ch}
+@media (max-width:820px){.numbers dl{grid-template-columns:repeat(2,1fr)}}
+
+/* workshop */
+.work .wrap{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(28px,5vw,72px);align-items:center}
+.work figure{margin:0;border-radius:6px;overflow:hidden;border:6px solid var(--mahogany);outline:1px solid var(--brass);aspect-ratio:4/5;max-width:100%}
+.work figure img{width:100%;height:100%;object-fit:cover}
+.jobs{list-style:none;margin:0;padding:0;display:flex;flex-direction:column}
+.jobs li{display:grid;grid-template-columns:minmax(0,13rem) minmax(0,1fr);gap:6px 24px;padding-block:20px;border-top:1px solid var(--line)}
+.jobs li:last-child{border-bottom:1px solid var(--line)}
+.jobs h3{font-size:1.4rem}
+.jobs p{color:var(--ivory-soft);font-size:.98rem}
+@media (max-width:860px){.work .wrap{grid-template-columns:1fr}.work figure{aspect-ratio:16/10}}
+@media (max-width:520px){.jobs li{grid-template-columns:1fr}}
+
+/* visit */
+.visit{background:var(--baize);color:#06170f}
+.visit .wrap{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(28px,5vw,72px);align-items:start}
+.visit .eyebrow{color:#06170f}
+.visit h2{font-size:clamp(2.2rem,5.4vw,4rem)}
+.visit .say{display:flex;flex-direction:column;gap:18px}
+.visit .say p{max-width:40ch;font-size:1.08rem}
+.slots{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:12px}
+.slots li{background:#06170f;color:var(--ivory);border-radius:6px;padding:18px 20px;display:flex;flex-direction:column;gap:4px;min-width:0}
+.slots b{font-family:var(--mono);font-weight:500;font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--brass)}
+.slots span{font-size:1.1rem;overflow-wrap:anywhere;user-select:all}
+.slots em{font-style:normal;color:var(--ivory-soft)}
+@media (max-width:820px){.visit .wrap{grid-template-columns:1fr}}
+
+footer{padding-block:36px 44px;font-size:.84rem;color:var(--ivory-soft)}
+footer .wrap{display:flex;flex-direction:column;gap:14px}
+footer .mark{color:var(--ivory);font-size:1.1rem}
+footer a{color:var(--ivory-soft)}
+footer p{max-width:90ch}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="mark" href="#top"><i></i>OLAYEMI</a>
+    <nav aria-label="Main">
+      <a href="#shop">Shop</a>
+      <a href="#workshop">Workshop</a>
+      <a class="pill" href="#visit">Visit us</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <div class="hero">
+    <img src="img/hero.jpg" alt="A full set of snooker balls in a tray: reds, yellow, green, brown, blue, pink and black">
+    <div class="wrap">
+      <h1><span>Snooker shop</span>OLAYEMI</h1>
+      <p class="lede">Cues, balls, tables and cloth for players who take the game seriously.</p>
+      <div class="acts">
+        <a class="btn solid" href="#shop">See what we stock</a>
+        <a class="btn ghost" href="#visit">Find the shop</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="rail" aria-label="The seven colours and their point values">
+    <div class="wrap">
+      <p>Seven colours. Every one of them on our shelves.</p>
+      <ul class="balls">
+        <li><span class="ball" style="--c:var(--b-red)">1</span>Red</li>
+        <li><span class="ball dark-num" style="--c:var(--b-yellow)">2</span>Yellow</li>
+        <li><span class="ball" style="--c:var(--b-green)">3</span>Green</li>
+        <li><span class="ball" style="--c:var(--b-brown)">4</span>Brown</li>
+        <li><span class="ball" style="--c:var(--b-blue)">5</span>Blue</li>
+        <li><span class="ball dark-num" style="--c:var(--b-pink)">6</span>Pink</li>
+        <li><span class="ball" style="--c:var(--b-black)">7</span>Black</li>
+      </ul>
+    </div>
+  </div>
+
+  <section id="shop">
+    <div class="wrap">
+      <div class="head">
+        <p class="eyebrow">In the shop</p>
+        <h2>Everything from the tip to the cloth</h2>
+        <p>Come in, hold the cue, feel the weight. We help you choose gear that suits the way you play, whether it is your first cue or your tenth.</p>
+      </div>
+      <div class="grid">
+        <article class="card wide">
+          <img src="img/cues.jpg" alt="A snooker cue with two extensions lying on green cloth" loading="lazy">
+          <span class="tag">Ash and maple</span>
+          <h3>Cues and extensions</h3>
+          <p>One-piece, two-piece and three-quarter cues, with mini-butts and telescopic extensions for the long shots.</p>
+        </article>
+        <article class="card">
+          <img src="img/chalk.jpg" alt="A hand chalking the tip of a cue" loading="lazy">
+          <span class="tag">Small things</span>
+          <h3>Chalk and tips</h3>
+          <p>Chalk by the cube or the box, and tips from soft to hard.</p>
+        </article>
+        <article class="card">
+          <img src="img/balls.jpg" alt="A boxed set of 22 snooker balls" loading="lazy">
+          <span class="tag">Sets of 22</span>
+          <h3>Ball sets</h3>
+          <p>Fifteen reds, six colours and a cue ball, matched for weight.</p>
+        </article>
+        <article class="card">
+          <img src="img/table.jpg" alt="A snooker table with the colours on their spots" loading="lazy">
+          <span class="tag">6 ft to full size</span>
+          <h3>Tables</h3>
+          <p>For clubs, lounges and homes. We deliver, assemble and level.</p>
+        </article>
+        <article class="card">
+          <img src="img/triangle.jpg" alt="Fifteen red balls racked in a wooden triangle" loading="lazy">
+          <span class="tag">Table kit</span>
+          <h3>Triangles and rests</h3>
+          <p>Racks, rests, spiders, scoreboards, brushes and covers.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="numbers" aria-labelledby="num-h">
+    <img src="img/reds.jpg" alt="" loading="lazy">
+    <div class="wrap">
+      <div class="head">
+        <p class="eyebrow">The game in numbers</p>
+        <h2 id="num-h">We know the measurements by heart</h2>
+      </div>
+      <dl>
+        <div><dt>12<small>ft</small></dt><dd>Length of a full-size table, by 6 ft wide.</dd></div>
+        <div><dt>52.5<small>mm</small></dt><dd>Diameter of a regulation snooker ball.</dd></div>
+        <div><dt>9.5<small>mm</small></dt><dd>The tip size most players settle on.</dd></div>
+        <div><dt>147</dt><dd>The maximum break. We sell the kit, the rest is practice.</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <section class="work" id="workshop">
+    <div class="wrap">
+      <figure><img src="img/hall.jpg" alt="A full-size snooker table lit by an overhead lamp in a dark room" loading="lazy"></figure>
+      <div>
+        <div class="head">
+          <p class="eyebrow">The workshop</p>
+          <h2>We look after tables and cues too</h2>
+          <p>Good equipment plays well for years if someone keeps it right. Bring it in, or ask us to come to you.</p>
+        </div>
+        <ul class="jobs">
+          <li><h3>Re-tipping</h3><p>A new tip fitted, shaped and ready for chalk while you wait.</p></li>
+          <li><h3>Re-clothing</h3><p>Worn or torn cloth stripped and replaced, bed and cushions.</p></li>
+          <li><h3>Table setup</h3><p>Delivery, assembly and levelling, so the ball runs straight.</p></li>
+          <li><h3>Cue repairs</h3><p>Ferrules, joints, dents and a clean and oil for tired shafts.</p></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="visit" id="visit">
+    <div class="wrap">
+      <div class="say">
+        <p class="eyebrow">Visit us</p>
+        <h2>Come and chalk up at OLAYEMI</h2>
+        <p>Walk in to try a cue, or send a message with what you need and we will have it ready.</p>
+      </div>
+      <ul class="slots">
+        <li><b>Address</b><span><em>[Your shop address]</em></span></li>
+        <li><b>Phone / WhatsApp</b><span><em>[Your phone number]</em></span></li>
+        <li><b>Opening hours</b><span><em>[Your opening days and times]</em></span></li>
+      </ul>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <a class="mark" href="#top"><i></i>OLAYEMI</a>
+    <p>Snooker shop. Cues, balls, tables, cloth and repairs.</p>
+    <p>Photos from Wikimedia Commons:
+      <a href="https://commons.wikimedia.org/wiki/File:Set_of_Snooker_Balls.png">ball set</a>,
+      <a href="https://commons.wikimedia.org/wiki/File:Snooker_cue_and_extensions.png">cue and extensions</a> and
+      <a href="https://commons.wikimedia.org/wiki/File:Snooker_Table_Start_Positions.jpg">table</a> by barfisch (CC BY-SA 3.0);
+      <a href="https://commons.wikimedia.org/wiki/File:Billiard_Chalk_and_Cue.jpg">chalk</a> by Fcb981 (CC BY-SA 3.0);
+      <a href="https://commons.wikimedia.org/wiki/File:Snooker_balls_storage_(51223529485).jpg">boxed balls</a> and
+      <a href="https://commons.wikimedia.org/wiki/File:Snooker_triangle_with_15_red_balls_(51221745512).jpg">triangle</a> by Snooker Spot (CC BY 2.0);
+      <a href="https://commons.wikimedia.org/wiki/File:Cue_ball_and_reds.jpg">cue ball and reds</a> by Ben Sutherland (CC BY 2.0);
+      <a href="https://commons.wikimedia.org/wiki/File:Snooker_table_as_seen_from_bottom_cushion.jpg">lit table</a> by Lee Vilenski (CC BY-SA 4.0). Photos resized and cropped.</p>
+  </div>
+</footer>
+</body>
+</html>
